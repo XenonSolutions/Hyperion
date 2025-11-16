@@ -53,6 +53,7 @@ namespace start
 
                 else
                 {
+                    Console.Clear();
                     goto Start;
                 }
             }
@@ -72,16 +73,7 @@ namespace start
             {
                 Console.WriteLine("This version of OpenRec is outdated. We recommend you install the latest version, OpenRec " + new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt"));
             }
-            if (File.Exists("SaveData\\Profile\\userid.txt"))
-            {
-                if (new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You are banned. Using this version of OpenRec will not work, please download OpenRec 0.4.2 or prior.");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    bannedflag = true;
-                }
-            }
+            
             Console.WriteLine("//Custom Room Downloader has been moved to the settings tab!" + Environment.NewLine);
             Console.WriteLine("(1) What's New" + Environment.NewLine +"(2) Change Settings" + Environment.NewLine + "(3) Modify Profile" + Environment.NewLine + "(4) Build Download Links" + Environment.NewLine + "(5) Start Server");
             string readline = Console.ReadLine();
@@ -263,7 +255,7 @@ namespace start
                                 Console.WriteLine("Failed to download profile...");
                                 goto Start;
                             }
-                            ;
+                        
                             List<ProfieStealer.Root> profile = JsonConvert.DeserializeObject<List<ProfieStealer.Root>>(data);
                             byte[] profileimage = new WebClient().DownloadData("https://img.rec.net/" + profile[0].profileImage + "?cropSquare=true&width=192&height=192");
                             File.WriteAllBytes("SaveData\\profileimage.png", profileimage);
@@ -317,7 +309,9 @@ namespace start
                         Console.WriteLine("Failed to download profile...");
                         goto Start;
                     }
+                    
                     ProfieStealer.ProfileSteal(data2);
+                    
                     Console.Clear();
                     Console.WriteLine("Success!");
                     goto Start;
@@ -364,7 +358,7 @@ namespace start
                 }
                 else if (readline2 == "2018")
                 {
-                    Console.WriteLine("May, July or September (Beta) 2018: (M, J, S)");
+                    Console.WriteLine("May, July or September (SEPTEMBER MIGHT NOT WORK) 2018: (M, J, S)");
                     string readline3 = Console.ReadLine();
                     if ((readline3 == "M") || (readline3 == "m"))
                     {
@@ -399,11 +393,14 @@ namespace start
                         new APIServer();
                         new WebSocket();
                     }
+                    
                 }
+                Console.WriteLine(msg);
             }
         }
+        public static string msg = "//This is the server sending and recieving data from recroom." + Environment.NewLine + "//Ignore this if you don't know what this means." + Environment.NewLine + "//Please start up the build now.";
         public static string version = "";
-        public static string appversion = "0.7.0";
+        public static string appversion = "0.6.9";
         public static bool bannedflag = false;
     }
 

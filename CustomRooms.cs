@@ -27,14 +27,14 @@ namespace api
             {
                 RoomId = 29,
                 Name = root2.Name,
-                Description = "OpenRec Downloaded Room",
+                Description = root2.Description,
                 ImageName = root2.ImageName,
-                CreatorPlayerId = Convert.ToUInt64(File.ReadAllText("SaveData\\Profile\\userid.txt")),
-                State = 0,
-                Accessibility = 1,
-                SupportsLevelVoting = false,
-                IsAGRoom = false,
-                CloningAllowed = false,
+                CreatorPlayerId = root2.CreatorAccountID,
+                State = root2.State,
+                Accessibility = root2.Accessibility,
+                SupportsLevelVoting = root2.SupportsLevelVoting,
+                IsAGRoom = root2.IsRRO,
+                CloningAllowed = root2.CloningAllowed,
                 SupportsScreens = true,
                 SupportsWalkVR = true,
                 SupportsTeleportVR = true,
@@ -52,7 +52,7 @@ namespace api
                     Name = "Home",
                     IsSandbox = true,
                     DataBlobName =  root2.SubRooms[0].DataBlob,
-                    MaxPlayers = 20,
+                    MaxPlayers = root2.SubRooms[0].MaxPlayers,
                     CanMatchmakeInto = true,
                     DataModifiedAt = root2.SubRooms[0].DataSavedAt,
                     ReplicationId = null,
@@ -95,7 +95,7 @@ namespace api
             {
                 RoomId = 29,
                 Name = root2.Name,
-                Description = "OpenRec Downloaded Room",
+                Description = "ReduxRec Downloaded Room",
                 ImageName = root2.ImageName,
                 CreatorPlayerId = Convert.ToUInt64(File.ReadAllText("SaveData\\Profile\\userid.txt")),
                 State = 0,
@@ -162,9 +162,9 @@ namespace api
             File.WriteAllText("SaveData\\Rooms\\Downloaded\\visitcount.txt", Convert.ToString(root2.Stats.VisitCount));
             File.WriteAllText("SaveData\\Rooms\\Downloaded\\RoomDetails.json", JsonConvert.SerializeObject(root));
         }
-            
-            
-        
+
+
+
         public static Room room { get; set; }
         public static List<Scene> scene { get; set; }
         public static Root root { get; set; }
@@ -187,7 +187,7 @@ namespace api
             public object ReplicationId { get; set; }
             public int ReleaseStatus { get; set; }
         }
-        
+
         public class Scene
         {
             public int RoomSceneId { get; set; }
@@ -206,7 +206,7 @@ namespace api
             public int ReleaseStatus { get; set; }
             public bool SupportsJoinInProgress { get; set; }
         }
-        
+
         public class Root
         {
             public Room Room { get; set; }

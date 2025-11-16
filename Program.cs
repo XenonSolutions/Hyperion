@@ -15,8 +15,8 @@ namespace start
     {
         static void Main()
         {
-            //startup for openrec
-            
+            //startup for reduxrec
+
             Setup.setup();
             goto Tutorial;
 
@@ -24,20 +24,20 @@ namespace start
             if (Setup.firsttime == true)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Title = "OpenRec Intro";
-                Console.WriteLine("Welcome to OpenRec " + appversion + "!");
-                Console.WriteLine("Is this your first time using OpenRec?");
+                Console.Title = "ReduxRec Intro";
+                Console.WriteLine("Welcome to ReduxRec " + appversion + "!");
+                Console.WriteLine("Is this your first time using ReduxRec?");
                 Console.WriteLine("Yes or No (Y, N)");
                 string readline22 = Console.ReadLine();
                 if (readline22 == "y" || readline22 == "Y")
                 {
                     Console.Clear();
-                    Console.Title = "OpenRec Tutorial";
-                    Console.WriteLine("In that case, welcome to OpenRec!");
-                    Console.WriteLine("OpenRec is server software that emulates the old servers of previous RecRoom versions.");
-                    Console.WriteLine("To use OpenRec, you'll need to have builds aswell!");
+                    Console.Title = "ReduxRec Tutorial";
+                    Console.WriteLine("In that case, welcome to ReduxRec!");
+                    Console.WriteLine("ReduxRec is server software that emulates the old servers of previous RecRoom versions.");
+                    Console.WriteLine("To use ReduxRec, you'll need to have builds aswell!");
                     Console.WriteLine("To download builds, either go to the builds channel or use the links below: (these links are also available from the #builds channel)" + Environment.NewLine);
-                    Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/builds.txt"));
+                    Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/ReduxxLabs/ReduxRec/master/Update/builds.txt"));
                     Console.WriteLine("Download a build and press any key to continue:");
                     Console.ReadKey();
                     Console.Clear();
@@ -63,25 +63,25 @@ namespace start
             }
 
         Start:
-            Console.Title = "OpenRec Startup Menu";
+            Console.Title = "ReduxRec Startup Menu";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("OpenRec - Open source Old RecRoom server software. (Version: " + appversion + ")");
-            Console.WriteLine("Made and provided by RecRoom 2016.");
-            Console.WriteLine("Download source code here: https://github.com/recroom2016/OpenRec");
+            Console.WriteLine("ReduxRec - Open source Old RecRoom server software. (Version: " + appversion + ")");
+            Console.WriteLine("Made and provided by ReduxLabs.");
+            Console.WriteLine("Download source code here: https://github.com/ReduxxLabs/ReduxRec");
             Console.WriteLine("Discord: https://discord.gg/daC8QUhnFP" + Environment.NewLine);
-            if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt").Contains(appversion)))
+            if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/ReduxxLabs/ReduxRec/master/Download/version.txt").Contains(appversion)))
             {
                 Console.WriteLine("This version of OpenRec is outdated. We recommend you install the latest version, OpenRec " + new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt"));
             }
-            
+
             Console.WriteLine("//Custom Room Downloader has been moved to the settings tab!" + Environment.NewLine);
             Console.WriteLine("(1) What's New" + Environment.NewLine +"(2) Change Settings" + Environment.NewLine + "(3) Modify Profile" + Environment.NewLine + "(4) Build Download Links" + Environment.NewLine + "(5) Start Server");
             string readline = Console.ReadLine();
             if (readline == "1")
             {
-                Console.Title = "OpenRec Changelog";
+                Console.Title = "ReduxRec Changelog";
                 Console.Clear();
-                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/changelog.txt"));
+                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/ReduxxLabs/ReduxRec/master/Download/changelog.txt"));
                 Console.WriteLine("Press any key to continue:");
                 Console.ReadKey();
                 Console.Clear();
@@ -93,7 +93,7 @@ namespace start
                 goto Settings;
 
                 Settings:
-                Console.Title = "OpenRec Settings Menu";
+                Console.Title = "ReduxRec Settings Menu";
                 Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Custom Room Downloader " + Environment.NewLine + "(3) Reset SaveData" + Environment.NewLine + "(4) Go Back");
                 string readline4 = Console.ReadLine();
                 if (readline4 == "1")
@@ -112,7 +112,7 @@ namespace start
                 }
                 else if (readline4 == "2")
                 {
-                    Console.Title = "OpenRec Custom Room Downloader";
+                    Console.Title = "ReduxRec Custom Room Downloader";
                     Console.Clear();
                     Console.WriteLine("Custom Room Downloader: This tool takes the room data of any room you type in and imports it into ^CustomRoom in September 27th 2018.");
                     Console.WriteLine("Please type in the name of the room you would like to download: (Case sensitive)");
@@ -142,17 +142,17 @@ namespace start
                     File.Delete("SaveData\\gameconfigs.txt");
                     File.Delete("SaveData\\storefronts2.txt");
                     File.Delete("SaveData\\Profile\\username.txt");
-                    File.Delete("SaveData\\Profile\\level.txt"); 
+                    File.Delete("SaveData\\Profile\\level.txt");
                     File.Delete("SaveData\\Profile\\userid.txt");
-                    File.Delete("SaveData\\myrooms.txt"); 
+                    File.Delete("SaveData\\myrooms.txt");
                     File.Delete("SaveData\\settings.txt");
                     File.Delete("SaveData\\App\\privaterooms.txt");
                     File.Delete("SaveData\\App\\facefeaturesadd.txt");
                     File.Delete("SaveData\\profileimage.png");
                     File.Delete("SaveData\\App\\firsttime.txt");
-                    
+
                     File.Delete("SaveData\\avataritems2.txt");
-                 
+
                     File.Delete("SaveData\\Rooms\\Downloaded\\roomname.txt");
                     File.Delete("SaveData\\Rooms\\Downloaded\\roomid.txt");
                     File.Delete("SaveData\\Rooms\\Downloaded\\datablob.txt");
@@ -255,11 +255,11 @@ namespace start
                                 Console.WriteLine("Failed to download profile...");
                                 goto Start;
                             }
-                        
+
                             List<ProfieStealer.Root> profile = JsonConvert.DeserializeObject<List<ProfieStealer.Root>>(data);
                             byte[] profileimage = new WebClient().DownloadData("https://img.rec.net/" + profile[0].profileImage + "?cropSquare=true&width=192&height=192");
                             File.WriteAllBytes("SaveData\\profileimage.png", profileimage);
-                            
+
                         }
                         catch
                         {
@@ -309,9 +309,9 @@ namespace start
                         Console.WriteLine("Failed to download profile...");
                         goto Start;
                     }
-                    
+
                     ProfieStealer.ProfileSteal(data2);
-                    
+
                     Console.Clear();
                     Console.WriteLine("Success!");
                     goto Start;
@@ -393,7 +393,7 @@ namespace start
                         new APIServer();
                         new WebSocket();
                     }
-                    
+
                 }
                 Console.WriteLine(msg);
             }

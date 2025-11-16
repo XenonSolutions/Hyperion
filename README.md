@@ -1,6 +1,6 @@
-# Welcome to OpenRec!
+# Welcome to ReduxRec!
 ---
-OpenRec is a RecRoom server software made by recroom2016!
+ReduxRec is a RecRoom server software made by ReduxLabs, based off OpenRec by recroom2016!
 
 ### Branches
  - Master / main

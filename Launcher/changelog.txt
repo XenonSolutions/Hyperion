@@ -1,7 +1,8 @@
-hello beta testers!
-please press start openrec at the bottom
+Update v0.7: first update in 3 years :skull:
+- Patched internal stuff
+- Removed Herobrine
 
-and just see if it works with 2016 pls
+Note: This release DOES NOT feature friending yet! This is just an update before that is released in version [REDACTED].
 
-thanks@!!
--recroom2016
+Credits:
+@Bkerboy - Development

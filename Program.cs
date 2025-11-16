@@ -23,7 +23,7 @@ namespace start
         Tutorial:
             if (Setup.firsttime == true)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Purple;
                 Console.Title = "ReduxRec Intro";
                 Console.WriteLine("Welcome to ReduxRec " + appversion + "!");
                 Console.WriteLine("Is this your first time using ReduxRec?");
@@ -64,17 +64,16 @@ namespace start
 
         Start:
             Console.Title = "ReduxRec Startup Menu";
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Purple;
             Console.WriteLine("ReduxRec - Open source Old RecRoom server software. (Version: " + appversion + ")");
             Console.WriteLine("Made and provided by ReduxLabs.");
             Console.WriteLine("Download source code here: https://github.com/ReduxxLabs/ReduxRec");
             Console.WriteLine("Discord: https://discord.gg/daC8QUhnFP" + Environment.NewLine);
             if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/ReduxxLabs/ReduxRec/master/Download/version.txt").Contains(appversion)))
             {
-                Console.WriteLine("This version of OpenRec is outdated. We recommend you install the latest version, OpenRec " + new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt"));
+                Console.WriteLine("This version of ReduxRec is outdated. We recommend you install the latest version, ReduxRec " + new WebClient().DownloadString("https://raw.githubusercontent.com/ReduxxLabs/ReduxRec/master/Download/version.txt"));
             }
 
-            Console.WriteLine("//Custom Room Downloader has been moved to the settings tab!" + Environment.NewLine);
             Console.WriteLine("(1) What's New" + Environment.NewLine +"(2) Change Settings" + Environment.NewLine + "(3) Modify Profile" + Environment.NewLine + "(4) Build Download Links" + Environment.NewLine + "(5) Start Server");
             string readline = Console.ReadLine();
             if (readline == "1")
@@ -115,6 +114,7 @@ namespace start
                     Console.Title = "ReduxRec Custom Room Downloader";
                     Console.Clear();
                     Console.WriteLine("Custom Room Downloader: This tool takes the room data of any room you type in and imports it into ^CustomRoom in September 27th 2018.");
+                    Console.WriteLine("This menu will soon be replaced with a live feed of all Custom Rooms in Rec Room.");
                     Console.WriteLine("Please type in the name of the room you would like to download: (Case sensitive)");
                     string roomname = Console.ReadLine();
                     string text = "";
@@ -177,7 +177,7 @@ namespace start
                 goto Profile;
 
             Profile:
-                Console.Title = "OpenRec Profile Menu";
+                Console.Title = "ReduxRec Profile Menu";
                 Console.WriteLine("(1) Change Username" + Environment.NewLine + "(2) Change Profile Image" + Environment.NewLine + "(3) Change Level" + Environment.NewLine + "(4) Profile Downloader" + Environment.NewLine + "(5) Go Back");
                 string readline3 = Console.ReadLine();
                 if (readline3 == "1")
@@ -289,7 +289,7 @@ namespace start
                 }
                 else if (readline3 == "4")
                 {
-                    Console.Title = "OpenRec Profile Downloader";
+                    Console.Title = "ReduxRec Profile Downloader";
                     Console.Clear();
                     Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any username you type in and imports it to OpenRec.");
                     Console.WriteLine("Please type the @ username of the profile you would like:");
@@ -324,7 +324,7 @@ namespace start
             }
             if (readline == "4")
             {
-                Console.Title = "OpenRec Build Downloads";
+                Console.Title = "ReduxRec Build Downloads";
                 Console.Clear();
                 Console.WriteLine("To download builds, either go to the builds channel or use the links below: (these links are also available from the #builds channel)" + Environment.NewLine);
                 Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/builds.txt"));
@@ -335,12 +335,12 @@ namespace start
             }
             if (readline == "5")
             {
-                Console.Title = "OpenRec Version Select";
-                Console.WriteLine("Please select the version of RecRoom the server should host: (2016, 2017, 2018)");
+                Console.Title = "ReduxRec Version Select";
+                Console.WriteLine("Please select the version of Rec Room the server should host: (2016, 2017, 2018)");
                 string readline2 = Console.ReadLine();
                 if (readline2 == "2016")
                 {
-                    Console.Title = "OpenRec December 25th, 2016";
+                    Console.Title = "ReduxRec December 25th, 2016";
                     version = "2016";
                     Console.Clear();
                     Console.WriteLine("Version Selected: December 25th, 2016.");
@@ -349,7 +349,7 @@ namespace start
                 }
                 else if (readline2 == "2017")
                 {
-                    Console.Title = "OpenRec October 19th 2017";
+                    Console.Title = "ReduxRec October 19th 2017";
                     version = "2017";
                     Console.Clear();
                     Console.WriteLine("Version Selected: October 19th, 2017.");
@@ -362,7 +362,7 @@ namespace start
                     string readline3 = Console.ReadLine();
                     if ((readline3 == "M") || (readline3 == "m"))
                     {
-                        Console.Title = "OpenRec May 30th 2018";
+                        Console.Title = "ReduxRec May 30th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: May 30th, 2018.");
@@ -373,7 +373,7 @@ namespace start
                     }
                     else if ((readline3 == "S") || (readline3 == "s"))
                     {
-                        Console.Title = "OpenRec September 27th 2018";
+                        Console.Title = "ReduxRec September 27th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: September 27th, 2018.");
@@ -384,7 +384,7 @@ namespace start
                     }
                     else if ((readline3 == "J") || (readline3 == "j"))
                     {
-                        Console.Title = "OpenRec July 20th 2018";
+                        Console.Title = "ReduxRec July 20th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: July 20th, 2018");
@@ -398,9 +398,9 @@ namespace start
                 Console.WriteLine(msg);
             }
         }
-        public static string msg = "//This is the server sending and recieving data from recroom." + Environment.NewLine + "//Ignore this if you don't know what this means." + Environment.NewLine + "//Please start up the build now.";
+        public static string msg = "//Please start up the build now.";
         public static string version = "";
-        public static string appversion = "0.6.9";
+        public static string appversion = "0.7.0";
         public static bool bannedflag = false;
     }
 

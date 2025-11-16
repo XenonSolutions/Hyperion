@@ -4,23 +4,23 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ApplicationIcon>icon2.ico</ApplicationIcon>
-    <AssemblyName>OpenRec</AssemblyName>
-    <RootNamespace>OpenRec</RootNamespace>
-    <Authors>recroom2016</Authors>
+    <AssemblyName>ReduxRec</AssemblyName>
+    <RootNamespace>ReduxRec</RootNamespace>
+    <Authors>ReduxLabs</Authors>
     <PackageIcon>icon2.png</PackageIcon>
-    <PackageIconUrl />
-    <RepositoryUrl>https://github.com/recroom2016/OpenRec</RepositoryUrl>
+    <PackageIconUrl/>
+    <RepositoryUrl>https://github.com/ReduxxLabs/ReduxRec</RepositoryUrl>
     <PackageProjectUrl>https://discord.gg/daC8QUhnFP</PackageProjectUrl>
-    <Company>OpenRec</Company>
-    <Version>0.4.0</Version>
+    <Company>ReduxLabs</Company>
+    <Version>0.7.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="NewFile1.txt" />
+    <None Remove="NewFile1.txt"/>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
   </ItemGroup>
 
   <ItemGroup>

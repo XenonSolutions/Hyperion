@@ -10,7 +10,7 @@ namespace api
 		public static void SetPlayerSettings(string jsonData)
 		{
 			if (jsonData == "")
-			{ 
+			{
 				return;
 			}
 			Setting setting = JsonConvert.DeserializeObject<Setting>(jsonData);
@@ -38,7 +38,7 @@ namespace api
 		{
 			File.WriteAllText(Environment.CurrentDirectory + Settings.SettingsPath, JsonConvert.SerializeObject(settings));
 		}
-		
+
 		public static List<Setting> CreateDefaultSettings()
 		{
 			return new List<Setting>
@@ -125,10 +125,10 @@ namespace api
 				}
 			};
 		}
-		
+
 		private static List<Setting> playerSettings;
 
-		
+
 		public static string SettingsPath = "\\SaveData\\settings.txt";
 	}
 }

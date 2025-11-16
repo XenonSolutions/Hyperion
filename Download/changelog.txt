@@ -1,5 +1,6 @@
-Update v0.7: first update in 3 years :skull:
+Update v0.7.0: first update in 3 years :skull:
 - Patched internal stuff
+- Updated room downloader
 - Removed Herobrine
 
 Note: This release DOES NOT feature friending yet! This is just an update before that is released in version [REDACTED].

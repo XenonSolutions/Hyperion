@@ -7,7 +7,7 @@ using vaultgamesesh;
 using System.IO;
 using server;
 using api;
-
+// plan to replace downloaded rooms with live rec room rooms
 namespace api
 {
     class CustomRooms
@@ -25,19 +25,19 @@ namespace api
             File.WriteAllText("SaveData\\Rooms\\Downloaded\\visitcount.txt", Convert.ToString(root2.Stats.VisitCount));
             room = new Room
             {
-                RoomId = 29,
+                RoomId = root2.RoomId,
                 Name = root2.Name,
                 Description = root2.Description,
                 ImageName = root2.ImageName,
-                CreatorPlayerId = root2.CreatorAccountID,
+                CreatorPlayerId = root2.CreatorAccountId,
                 State = root2.State,
                 Accessibility = root2.Accessibility,
                 SupportsLevelVoting = root2.SupportsLevelVoting,
                 IsAGRoom = root2.IsRRO,
                 CloningAllowed = root2.CloningAllowed,
-                SupportsScreens = true,
-                SupportsWalkVR = true,
-                SupportsTeleportVR = true,
+                SupportsScreens = root2.SupportsScreens,
+                SupportsWalkVR = root2.SupportsWalkVR,
+                SupportsTeleportVR = root2.SupportsTeleportVR,
                 ReplicationId = null,
                 ReleaseStatus = 0
 
@@ -47,10 +47,10 @@ namespace api
                 new Scene()
                 {
                     RoomSceneId = 1,
-                    RoomId = 29,
+                    RoomId = root2.SubRooms[0].RoomID,
                     RoomSceneLocationId = root2.SubRooms[0].UnitySceneId,
-                    Name = "Home",
-                    IsSandbox = true,
+                    Name = root2.SubRooms[0].Name,
+                    IsSandbox = root2.SubRooms[0].IsSandbox,
                     DataBlobName =  root2.SubRooms[0].DataBlob,
                     MaxPlayers = root2.SubRooms[0].MaxPlayers,
                     CanMatchmakeInto = true,
@@ -93,19 +93,19 @@ namespace api
             ModernRooms.Root root2 = JsonConvert.DeserializeObject<ModernRooms.Root>(webdata);
             room = new Room
             {
-                RoomId = 29,
+                RoomId = root2.RoomId,
                 Name = root2.Name,
-                Description = "ReduxRec Downloaded Room",
+                Description = root2.Decription,
                 ImageName = root2.ImageName,
-                CreatorPlayerId = Convert.ToUInt64(File.ReadAllText("SaveData\\Profile\\userid.txt")),
-                State = 0,
-                Accessibility = 1,
-                SupportsLevelVoting = false,
-                IsAGRoom = false,
-                CloningAllowed = false,
-                SupportsScreens = true,
-                SupportsWalkVR = true,
-                SupportsTeleportVR = true,
+                CreatorPlayerId = root2.CreatorAccountId,
+                State = root2.State,
+                Accessibility = root2.Accessibility,
+                SupportsLevelVoting = root2.SupportsLevelVotings,
+                IsAGRoom = root2.IsRRO,
+                CloningAllowed = root2.CloningAllowed,
+                SupportsScreens = root2.SupportsScreens,
+                SupportsWalkVR = root2.SupportsWalkVR,
+                SupportsTeleportVR = root2.SupportsTeleportVR,
                 ReplicationId = null,
                 ReleaseStatus = 0
 
@@ -115,12 +115,12 @@ namespace api
                 new Scene()
                 {
                     RoomSceneId = 1,
-                    RoomId = 29,
+                    RoomId = root2.SubRooms[0].RoomId,
                     RoomSceneLocationId = root2.SubRooms[0].UnitySceneId,
-                    Name = "Home",
-                    IsSandbox = true,
+                    Name = root2.SubRooms[0].Name,
+                    IsSandbox = root2.SubRooms[0].IsSandbox,
                     DataBlobName =  root2.SubRooms[0].DataBlob,
-                    MaxPlayers = 20,
+                    MaxPlayers = root2.SubRooms[0].MaxPlayers,
                     CanMatchmakeInto = true,
                     DataModifiedAt = root2.SubRooms[0].DataSavedAt,
                     ReplicationId = null,

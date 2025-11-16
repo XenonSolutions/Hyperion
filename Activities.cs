@@ -17,162 +17,22 @@ namespace api
 				{
 					new Activities.Charades.word
 					{
-						EN_US = "talking ben",
+						EN_US = "Furry",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "lemon",
+						EN_US = "Slugcat",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "grape",
+						EN_US = "Steam Machine",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "roblox",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "tree",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "cloud",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "iphone",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "your house",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "spaghetti",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "lean",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "bitcoin",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "nft",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "grass",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "recroom2016",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "joker",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "fortnite",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "woman",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "spiderman",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "vr",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "among us",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "coach",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "coach with a gun",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "funny fish",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "skinwalker",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "christmas tree",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "ur mom",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "stick of ram",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "big mac",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "ninetndo switch",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "crescendo",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "boxing",
-						Difficulty = 0
-					},
-					new Activities.Charades.word
-					{
-						EN_US = "angry birds",
+						EN_US = "Your Mom",
 						Difficulty = 0
 					}
 				};

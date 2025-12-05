@@ -25,19 +25,19 @@ namespace api
             File.WriteAllText("SaveData\\Rooms\\Downloaded\\visitcount.txt", Convert.ToString(root2.Stats.VisitCount));
             room = new Room
             {
-                RoomId = 29,
+                RoomId = root2.RoomId,
                 Name = root2.Name,
-                Description = "OpenRec Downloaded Room",
+                Description = root2.Description,
                 ImageName = root2.ImageName,
-                CreatorPlayerId = Convert.ToUInt64(File.ReadAllText("SaveData\\Profile\\userid.txt")),
-                State = 0,
-                Accessibility = 1,
-                SupportsLevelVoting = false,
-                IsAGRoom = false,
-                CloningAllowed = false,
-                SupportsScreens = true,
-                SupportsWalkVR = true,
-                SupportsTeleportVR = true,
+                CreatorPlayerId = root2.CreatorAccountId,
+                State = root2.State,
+                Accessibility = root2.Accessibility,
+                SupportsLevelVoting = root2.SupportsLevelVoting,
+                IsAGRoom = root2.IsRRO,
+                CloningAllowed = root2.CloningAllowed,
+                SupportsScreens = root2.SupportsScreens,
+                SupportsWalkVR = root2.SupportsWalkVR,
+                SupportsTeleportVR = root2.SupportsTeleportVR,
                 ReplicationId = null,
                 ReleaseStatus = 0
 

@@ -1,6 +1,6 @@
-# Welcome to OpenRec!
+# Welcome to Hyperion!
 ---
-OpenRec is a RecRoom server software made by recroom2016!
+Hyperion is a RecRoom server software made by Xenon, based off OpenRed by recroom2016!
 
 ### Branches
  - Master / main
@@ -14,4 +14,4 @@ The nightly branch is where all the experimental updates that are needed to be t
 ### Getting in contact with the community
 
 If you are new to this we recommend you joining our Discord!
-Link: https://discord.com/invite/daC8QUhnFP
+Link: https://discord.com/invite/zwWw5mJSkZ

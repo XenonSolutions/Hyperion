@@ -218,10 +218,10 @@ namespace server
 							CachedPlayerID = ulong.Parse(text.Remove(0, 32));
 							CachedPlatformID = ulong.Parse(text.Remove(0, 22));
 							File.WriteAllText("SaveData\\Profile\\userid.txt", Convert.ToString(CachedPlayerID));
-							if (new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
+							if (new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
 							{
 								Console.ForegroundColor = ConsoleColor.Red;
-								Console.WriteLine("You are banned. Using this version of OpenRec will not work, please download OpenRec 0.4.2 or prior.");
+								Console.WriteLine("You are banned.");
 								Console.ForegroundColor = ConsoleColor.Green;
 								start.Program.bannedflag = true;
 							}
@@ -391,10 +391,10 @@ namespace server
 							CachedPlayerID = ulong.Parse(text.Remove(0, 32));
 							CachedPlatformID = ulong.Parse(text.Remove(0, 22));
 							File.WriteAllText("SaveData\\Profile\\userid.txt", Convert.ToString(CachedPlayerID));
-							if (new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
+							if (new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
 							{
 								Console.ForegroundColor = ConsoleColor.Red;
-								Console.WriteLine("You are banned. Using this version of OpenRec will not work, please download OpenRec 0.4.2 or prior.");
+								Console.WriteLine("You are banned.");
 								Console.ForegroundColor = ConsoleColor.Green;
 								start.Program.bannedflag = true;
 							}
@@ -637,10 +637,10 @@ namespace server
 						}
 						if (Url == "presence/v3/heartbeat")
 						{
-							if (new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
+							if (new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/banned.txt").Contains(File.ReadAllText("SaveData\\Profile\\userid.txt")))
 							{
 								Console.ForegroundColor = ConsoleColor.Red;
-								Console.WriteLine("You are banned. Using this version of OpenRec will not work, please download OpenRec 0.4.2 or prior.");
+								Console.WriteLine("You are banned.");
 								Console.ForegroundColor = ConsoleColor.Green;
 								start.Program.bannedflag = true;
 								Late2018WebSock.instance.Broadcast(ws.Notification.Reponse.createBannedResponse());
@@ -649,11 +649,11 @@ namespace server
 						}
 						if (Url == "rooms/v1/featuredRoomGroup")
 						{
-							s = new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/dormslideshow.txt");
+							s = new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/dormslideshow.txt");
 						}
 						if (Url.StartsWith("rooms/v1/hot"))
 						{
-							s = new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/hotrooms.txt");
+							s = new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/hotrooms.txt");
 						}
 						if (Url.StartsWith("rooms/v2/instancedetails"))
 						{
@@ -674,7 +674,7 @@ namespace server
 						}
 						if (Url == "images/v1/slideshow")
 						{
-							s = new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/rcslideshow.txt");
+							s = new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/rcslideshow.txt");
 						}
 						Console.WriteLine("API Response: " + s);
 						bytes = Encoding.UTF8.GetBytes(s);

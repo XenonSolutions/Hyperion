@@ -1487,7 +1487,7 @@ namespace vaultgamesesh
 					{
 						RoomId = Convert.ToUInt64(File.ReadAllText("SaveData\\Rooms\\Downloaded\\roomid.txt")),
 						Name = File.ReadAllText("SaveData\\Rooms\\Downloaded\\roomname.txt"),
-						Description = "OpenRec Downloaded Custom Room",
+						Description = "Hyperion Downloaded Custom Room",
 						CreatorPlayerId = Convert.ToUInt64(File.ReadAllText("SaveData\\Profile\\userid.txt")),
 						ImageName = File.ReadAllText("SaveData\\Rooms\\Downloaded\\imagename.txt"),
 						State = 0,

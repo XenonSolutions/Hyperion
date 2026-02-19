@@ -15,7 +15,7 @@ namespace start
     {
         static void Main()
         {
-            //startup for openrec
+            //startup for hyperion
             
             Setup.setup();
             goto Tutorial;
@@ -24,20 +24,20 @@ namespace start
             if (Setup.firsttime == true)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Title = "OpenRec Intro";
-                Console.WriteLine("Welcome to OpenRec " + appversion + "!");
-                Console.WriteLine("Is this your first time using OpenRec?");
+                Console.Title = "Hyperion Intro";
+                Console.WriteLine("Welcome to Hyperion " + appversion + "!");
+                Console.WriteLine("Is this your first time using Hyperion?");
                 Console.WriteLine("Yes or No (Y, N)");
                 string readline22 = Console.ReadLine();
                 if (readline22 == "y" || readline22 == "Y")
                 {
                     Console.Clear();
-                    Console.Title = "OpenRec Tutorial";
-                    Console.WriteLine("In that case, welcome to OpenRec!");
-                    Console.WriteLine("OpenRec is server software that emulates the old servers of previous RecRoom versions.");
-                    Console.WriteLine("To use OpenRec, you'll need to have builds aswell!");
+                    Console.Title = "Hyperion Tutorial";
+                    Console.WriteLine("In that case, welcome to Hyperion!");
+                    Console.WriteLine("Hyperion is server software that emulates the old servers of previous RecRoom versions.");
+                    Console.WriteLine("To use Hyperion, you'll need to have builds aswell!");
                     Console.WriteLine("To download builds, either go to the builds channel or use the links below: (these links are also available from the #builds channel)" + Environment.NewLine);
-                    Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/builds.txt"));
+                    Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/builds.txt"));
                     Console.WriteLine("Download a build and press any key to continue:");
                     Console.ReadKey();
                     Console.Clear();
@@ -63,15 +63,15 @@ namespace start
             }
 
         Start:
-            Console.Title = "OpenRec Startup Menu";
+            Console.Title = "Hyperion Startup Menu";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("OpenRec - Open source Old RecRoom server software. (Version: " + appversion + ")");
+            Console.WriteLine("Hyperion - Open source Old RecRoom server software. (Version: " + appversion + ")");
             Console.WriteLine("Made and provided by RecRoom 2016.");
-            Console.WriteLine("Download source code here: https://github.com/recroom2016/OpenRec");
+            Console.WriteLine("Download source code here: https://github.com/XenonSolutions/Hyperion");
             Console.WriteLine("Discord: https://discord.gg/daC8QUhnFP" + Environment.NewLine);
-            if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt").Contains(appversion)))
+            if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/version.txt").Contains(appversion)))
             {
-                Console.WriteLine("This version of OpenRec is outdated. We recommend you install the latest version, OpenRec " + new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/version.txt"));
+                Console.WriteLine("This version of Hyperion is outdated. We recommend you install the latest version, Hyperion " + new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/version.txt"));
             }
             
             Console.WriteLine("//Custom Room Downloader has been moved to the settings tab!" + Environment.NewLine);
@@ -79,9 +79,9 @@ namespace start
             string readline = Console.ReadLine();
             if (readline == "1")
             {
-                Console.Title = "OpenRec Changelog";
+                Console.Title = "Hyperion Changelog";
                 Console.Clear();
-                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/changelog.txt"));
+                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/changelog.txt"));
                 Console.WriteLine("Press any key to continue:");
                 Console.ReadKey();
                 Console.Clear();
@@ -93,7 +93,7 @@ namespace start
                 goto Settings;
 
                 Settings:
-                Console.Title = "OpenRec Settings Menu";
+                Console.Title = "Hyperion Settings Menu";
                 Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Custom Room Downloader " + Environment.NewLine + "(3) Reset SaveData" + Environment.NewLine + "(4) Go Back");
                 string readline4 = Console.ReadLine();
                 if (readline4 == "1")
@@ -112,7 +112,7 @@ namespace start
                 }
                 else if (readline4 == "2")
                 {
-                    Console.Title = "OpenRec Custom Room Downloader";
+                    Console.Title = "Hyperion Custom Room Downloader";
                     Console.Clear();
                     Console.WriteLine("Custom Room Downloader: This tool takes the room data of any room you type in and imports it into ^CustomRoom in September 27th 2018.");
                     Console.WriteLine("Please type in the name of the room you would like to download: (Case sensitive)");
@@ -177,7 +177,7 @@ namespace start
                 goto Profile;
 
             Profile:
-                Console.Title = "OpenRec Profile Menu";
+                Console.Title = "Hyperion Profile Menu";
                 Console.WriteLine("(1) Change Username" + Environment.NewLine + "(2) Change Profile Image" + Environment.NewLine + "(3) Change Level" + Environment.NewLine + "(4) Profile Downloader" + Environment.NewLine + "(5) Go Back");
                 string readline3 = Console.ReadLine();
                 if (readline3 == "1")
@@ -227,7 +227,7 @@ namespace start
                         catch (Exception ex4)
                         {
                             Console.Clear();
-                            Console.WriteLine("Invalid Image (Make sure its on the same drive as OpenRec)");
+                            Console.WriteLine("Invalid Image (Make sure its on the same drive as Hyperion and that you have permission to access it)");
                             goto Profile;
                         }
                         Console.Clear();
@@ -289,9 +289,9 @@ namespace start
                 }
                 else if (readline3 == "4")
                 {
-                    Console.Title = "OpenRec Profile Downloader";
+                    Console.Title = "Hyperion Profile Downloader";
                     Console.Clear();
-                    Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any username you type in and imports it to OpenRec.");
+                    Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any username you type in and imports it to Hyperion.");
                     Console.WriteLine("Please type the @ username of the profile you would like:");
                     string readusername = Console.ReadLine();
                     if (readusername.StartsWith("@"))
@@ -324,10 +324,10 @@ namespace start
             }
             if (readline == "4")
             {
-                Console.Title = "OpenRec Build Downloads";
+                Console.Title = "Hyperion Build Downloads";
                 Console.Clear();
                 Console.WriteLine("To download builds, either go to the builds channel or use the links below: (these links are also available from the #builds channel)" + Environment.NewLine);
-                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Update/builds.txt"));
+                Console.WriteLine(new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Update/builds.txt"));
                 Console.WriteLine("Download a build and press any key to continue:");
                 Console.ReadKey();
                 Console.Clear();
@@ -335,12 +335,12 @@ namespace start
             }
             if (readline == "5")
             {
-                Console.Title = "OpenRec Version Select";
+                Console.Title = "Hyperion Version Select";
                 Console.WriteLine("Please select the version of RecRoom the server should host: (2016, 2017, 2018)");
                 string readline2 = Console.ReadLine();
                 if (readline2 == "2016")
                 {
-                    Console.Title = "OpenRec December 25th, 2016";
+                    Console.Title = "Hyperion December 25th, 2016";
                     version = "2016";
                     Console.Clear();
                     Console.WriteLine("Version Selected: December 25th, 2016.");
@@ -349,7 +349,7 @@ namespace start
                 }
                 else if (readline2 == "2017")
                 {
-                    Console.Title = "OpenRec October 19th 2017";
+                    Console.Title = "Hyperion October 19th 2017";
                     version = "2017";
                     Console.Clear();
                     Console.WriteLine("Version Selected: October 19th, 2017.");
@@ -362,7 +362,7 @@ namespace start
                     string readline3 = Console.ReadLine();
                     if ((readline3 == "M") || (readline3 == "m"))
                     {
-                        Console.Title = "OpenRec May 30th 2018";
+                        Console.Title = "Hyperion May 30th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: May 30th, 2018.");
@@ -373,7 +373,7 @@ namespace start
                     }
                     else if ((readline3 == "S") || (readline3 == "s"))
                     {
-                        Console.Title = "OpenRec September 27th 2018";
+                        Console.Title = "Hyperion September 27th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: September 27th, 2018.");
@@ -384,7 +384,7 @@ namespace start
                     }
                     else if ((readline3 == "J") || (readline3 == "j"))
                     {
-                        Console.Title = "OpenRec July 20th 2018";
+                        Console.Title = "Hyperion July 20th 2018";
                         version = "2018";
                         Console.Clear();
                         Console.WriteLine("Version Selected: July 20th, 2018");

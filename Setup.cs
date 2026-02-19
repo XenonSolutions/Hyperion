@@ -26,39 +26,39 @@ namespace start
 			}
 			if (!(File.Exists("SaveData\\avatar.txt")))
 			{
-				File.WriteAllText("SaveData\\avatar.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/avatar.txt"));
+				File.WriteAllText("SaveData\\avatar.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/OpenRec/master/Download/avatar.txt"));
 			}
 			else if (File.ReadAllText("SaveData\\avatar.txt") == "")
             {
-				File.WriteAllText("SaveData\\avatar.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/avatar.txt"));
+				File.WriteAllText("SaveData\\avatar.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/avatar.txt"));
 			}
 			if (!(File.Exists("SaveData\\avataritems.txt")))
 			{
-				File.WriteAllText("SaveData\\avataritems.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/avataritems.txt"));
+				File.WriteAllText("SaveData\\avataritems.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/avataritems.txt"));
 			}
 			if (!(File.Exists("SaveData\\avataritems2.txt")))
 			{
-				File.WriteAllText("SaveData\\avataritems2.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/avataritems2.txt"));
+				File.WriteAllText("SaveData\\avataritems2.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/avataritems2.txt"));
 			}
 			if (!(File.Exists("SaveData\\equipment.txt")))
 			{
-				File.WriteAllText("SaveData\\equipment.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/equipment.txt"));
+				File.WriteAllText("SaveData\\equipment.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/equipment.txt"));
 			}
 			if (!(File.Exists("SaveData\\consumables.txt")))
 			{
-				File.WriteAllText("SaveData\\consumables.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/consumables.txt"));
+				File.WriteAllText("SaveData\\consumables.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/consumables.txt"));
 			}
 			if (!(File.Exists("SaveData\\gameconfigs.txt")))
 			{
-				File.WriteAllText("SaveData\\gameconfigs.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/gameconfigs.txt"));
+				File.WriteAllText("SaveData\\gameconfigs.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/gameconfigs.txt"));
 			}
 			if (!(File.Exists("SaveData\\storefronts2.txt")))
 			{
-				File.WriteAllText("SaveData\\storefronts2.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/storefront2.txt"));
+				File.WriteAllText("SaveData\\storefronts2.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/storefront2.txt"));
 			}
 			if (!(File.Exists("SaveData\\baserooms.txt")))
 			{
-				File.WriteAllText("SaveData\\baserooms.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/baserooms.txt"));
+				File.WriteAllText("SaveData\\baserooms.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/baserooms.txt"));
 			}
 			if (!(File.Exists("SaveData\\Profile\\username.txt")))
 			{
@@ -82,7 +82,7 @@ namespace start
 			}
 			if (!(File.Exists("SaveData\\profileimage.png")))
 			{
-				File.WriteAllBytes("SaveData\\profileimage.png", new WebClient().DownloadData("https://github.com/OpenRecRoom/OpenRec/raw/main/profileimage.png"));
+				File.WriteAllBytes("SaveData\\profileimage.png", new WebClient().DownloadData("https://github.com/XenonSolutions/Hyperion/master/Download/profileimage.png"));
 			}
 			if (!(File.Exists("SaveData\\App\\privaterooms.txt")))
 			{
@@ -94,7 +94,7 @@ namespace start
 			}
 			if (!(File.Exists("SaveData\\App\\facefeaturesadd.txt")))
 			{
-				File.WriteAllText("SaveData\\App\\facefeaturesadd.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/recroom2016/OpenRec/master/Download/facefeaturesadd.txt"));
+				File.WriteAllText("SaveData\\App\\facefeaturesadd.txt", new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/facefeaturesadd.txt"));
 			}
 			goto tryagain;
 

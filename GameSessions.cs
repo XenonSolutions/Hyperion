@@ -14,7 +14,7 @@ namespace gamesesh
 		{
 			long? creatorid = 1243409L;
 			long gamesessionid = long.Parse(start.Program.version + "1");
-			Console.WriteLine("OpenRec GameSession Room");
+			Console.WriteLine("Hyperion GameSession Room");
 			GameSessions.JoinRandomRequest joinRandomRequest = JsonConvert.DeserializeObject<GameSessions.JoinRandomRequest>(jsonData);
 			if (File.ReadAllText("SaveData\\App\\privaterooms.txt") == "Enabled")
 			{
@@ -36,7 +36,7 @@ namespace gamesesh
 				RecRoomId = null,
 				EventId = null,
 				CreatorPlayerId = creatorid,
-				Name = "OpenRec Room",
+				Name = "Hyperion Room",
 				ActivityLevelId = joinRandomRequest.ActivityLevelIds[0],
 				Private = false,
 				Sandbox = false,
@@ -70,7 +70,7 @@ namespace gamesesh
 		public static string Create(string jsonData)
 		{
 			long gamesessionid = 20161L;
-			Console.WriteLine("OpenRec GameSession Custom Room");
+			Console.WriteLine("Hyperion GameSession Custom Room");
 			if (File.ReadAllText("SaveData\\App\\privaterooms.txt") == "Enabled")
 			{
 				gamesessionid = new Random().Next(0, 99);
@@ -88,7 +88,7 @@ namespace gamesesh
 				RecRoomId = null,
 				EventId = null,
 				CreatorPlayerId = (long?)APIServer.CachedPlayerID,
-				Name = "OpenRec Custom Room",
+				Name = "Hyperion Custom Room",
 				ActivityLevelId = createRequest.ActivityLevelId,
 				Private = false,
 				Sandbox = true,

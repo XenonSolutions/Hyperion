@@ -22,7 +22,7 @@ namespace api
             }
             if (!(File.Exists("SaveData\\profileimage.png")))
             {
-                File.WriteAllBytes("SaveData\\profileimage.png", new WebClient().DownloadData("https://github.com/OpenRecRoom/OpenRec/raw/main/profileimage.png"));
+                File.WriteAllBytes("SaveData\\profileimage.png", new WebClient().DownloadData("https://github.com/XenonSolutions/Hyperion/master/Download/profileimage.png"));
             }
             Console.WriteLine("Done!");
             Console.Clear();

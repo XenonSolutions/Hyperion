@@ -62,7 +62,7 @@ namespace start
 			}
 			if (!(File.Exists("SaveData\\Profile\\username.txt")))
 			{
-				File.WriteAllText("SaveData\\Profile\\username.txt", "OpenRec User#" + new Random().Next(0, 1000000));
+				File.WriteAllText("SaveData\\Profile\\username.txt", "Hyperion User#" + new Random().Next(0, 1000000));
 			}
 			if (!(File.Exists("SaveData\\Profile\\level.txt")))
 			{

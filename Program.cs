@@ -66,7 +66,7 @@ namespace start
             Console.Title = "Hyperion Startup Menu";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hyperion - Open source Old RecRoom server software. (Version: " + appversion + ")");
-            Console.WriteLine("Made and provided by RecRoom 2016.");
+            Console.WriteLine("Made and provided by Xenon.");
             Console.WriteLine("Download source code here: https://github.com/XenonSolutions/Hyperion");
             Console.WriteLine("Discord: https://discord.gg/daC8QUhnFP" + Environment.NewLine);
             if (!(new WebClient().DownloadString("https://raw.githubusercontent.com/XenonSolutions/Hyperion/master/Download/version.txt").Contains(appversion)))
@@ -94,7 +94,7 @@ namespace start
 
                 Settings:
                 Console.Title = "Hyperion Settings Menu";
-                Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Custom Room Downloader " + Environment.NewLine + "(3) Reset SaveData" + Environment.NewLine + "(4) Go Back");
+                Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Custom Room Downloader" + Environment.NewLine + "(3) Reset SaveData" + Environment.NewLine + "(4) Go Back");
                 string readline4 = Console.ReadLine();
                 if (readline4 == "1")
                 {
@@ -110,7 +110,7 @@ namespace start
                     Console.WriteLine("Success!");
                     goto Settings;
                 }
-                else if (readline4 == "2")
+                else if (readline4 == "2") // Note to Self: Remove this when Rec Room shuts down
                 {
                     Console.Title = "Hyperion Custom Room Downloader";
                     Console.Clear();
@@ -234,7 +234,7 @@ namespace start
                         Console.WriteLine("Success!");
                         goto Profile;
                     }
-                    else if (readline4 == "3")
+                    else if (readline4 == "3") // Note to Self: Remove this when Rec Room shuts down
                     {
                         Console.WriteLine("Type a RecRoom @ username and press enter: ");
                         string username = Console.ReadLine();
@@ -287,11 +287,11 @@ namespace start
                     Console.WriteLine("Success!");
                     goto Profile;
                 }
-                else if (readline3 == "4")
+                else if (readline3 == "4") // Note to Self: Remove this when Rec Room shuts down
                 {
                     Console.Title = "Hyperion Profile Downloader";
                     Console.Clear();
-                    Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any username you type in and imports it to Hyperion.");
+                    Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any Rec Room username you type in and imports it to Hyperion.");
                     Console.WriteLine("Please type the @ username of the profile you would like:");
                     string readusername = Console.ReadLine();
                     if (readusername.StartsWith("@"))
@@ -400,7 +400,7 @@ namespace start
         }
         public static string msg = "//This is the server sending and recieving data from recroom." + Environment.NewLine + "//Ignore this if you don't know what this means." + Environment.NewLine + "//Please start up the build now.";
         public static string version = "";
-        public static string appversion = "0.6.9";
+        public static string appversion = "0.7.0";
         public static bool bannedflag = false;
     }
 

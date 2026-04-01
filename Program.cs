@@ -94,7 +94,7 @@ namespace start
 
                 Settings:
                 Console.Title = "Hyperion Settings Menu";
-                Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Custom Room Downloader" + Environment.NewLine + "(3) Reset SaveData" + Environment.NewLine + "(4) Go Back");
+                Console.WriteLine("(1) Private Rooms: " + File.ReadAllText("SaveData\\App\\privaterooms.txt") + Environment.NewLine + "(2) Reset SaveData" + Environment.NewLine + "(3) Go Back");
                 string readline4 = Console.ReadLine();
                 if (readline4 == "1")
                 {
@@ -110,30 +110,7 @@ namespace start
                     Console.WriteLine("Success!");
                     goto Settings;
                 }
-                else if (readline4 == "2") // Note to Self: Remove this when Rec Room shuts down
-                {
-                    Console.Title = "Hyperion Custom Room Downloader";
-                    Console.Clear();
-                    Console.WriteLine("Custom Room Downloader: This tool takes the room data of any room you type in and imports it into ^CustomRoom in September 27th 2018.");
-                    Console.WriteLine("Please type in the name of the room you would like to download: (Case sensitive)");
-                    string roomname = Console.ReadLine();
-                    string text = "";
-                    try
-                    {
-                        text = new WebClient().DownloadString("https://rooms.rec.net/rooms?name=" + roomname + "&include=297");
-                    }
-                    catch
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Failed to download room...");
-                        goto Settings;
-                    }
-                    CustomRooms.RoomDecode(text);
-                    Console.Clear();
-                    Console.WriteLine("Success!");
-                    goto Settings;
-                }
-                else if (readline4 == "3")
+                else if (readline4 == "2")
                 {
                     File.Delete("SaveData\\avatar.txt");
                     File.Delete("SaveData\\avataritems.txt");
@@ -165,7 +142,7 @@ namespace start
                     Setup.setup();
                     goto Settings;
                 }
-                else if (readline4 == "4")
+                else if (readline4 == "3")
                 {
                     Console.Clear();
                     goto Start;
@@ -178,7 +155,7 @@ namespace start
 
             Profile:
                 Console.Title = "Hyperion Profile Menu";
-                Console.WriteLine("(1) Change Username" + Environment.NewLine + "(2) Change Profile Image" + Environment.NewLine + "(3) Change Level" + Environment.NewLine + "(4) Profile Downloader" + Environment.NewLine + "(5) Go Back");
+                Console.WriteLine("(1) Change Username" + Environment.NewLine + "(2) Change Profile Image" + Environment.NewLine + "(3) Change Level" + Environment.NewLine + "(4) Go Back");
                 string readline3 = Console.ReadLine();
                 if (readline3 == "1")
                 {
@@ -193,7 +170,7 @@ namespace start
                 else if (readline3 == "2")
                 {
                     Console.Clear();
-                    Console.WriteLine("1) Upload Media Link" + Environment.NewLine + "2) Drag Image onto this window" + Environment.NewLine + "3) Download Rec.Net Profile Image" + Environment.NewLine + "4) Go Back");
+                    Console.WriteLine("1) Upload Media Link" + Environment.NewLine + "2) Drag Image onto this window" + Environment.NewLine + "3) Go Back");
                     string readline4 = Console.ReadLine();
                     if (readline4 == "1")
                     {
@@ -234,44 +211,7 @@ namespace start
                         Console.WriteLine("Success!");
                         goto Profile;
                     }
-                    else if (readline4 == "3") // Note to Self: Remove this when Rec Room shuts down
-                    {
-                        Console.WriteLine("Type a RecRoom @ username and press enter: ");
-                        string username = Console.ReadLine();
-                        if (username.StartsWith("@"))
-                        {
-                            username = username.Remove(0, 1);
-                        }
-                        try
-                        {
-                            string data = "";
-                            try
-                            {
-                                data = new WebClient().DownloadString("https://accounts.rec.net/account/search?name=" + username);
-                            }
-                            catch
-                            {
-                                Console.Clear();
-                                Console.WriteLine("Failed to download profile...");
-                                goto Start;
-                            }
-                        
-                            List<ProfieStealer.Root> profile = JsonConvert.DeserializeObject<List<ProfieStealer.Root>>(data);
-                            byte[] profileimage = new WebClient().DownloadData("https://img.rec.net/" + profile[0].profileImage + "?cropSquare=true&width=192&height=192");
-                            File.WriteAllBytes("SaveData\\profileimage.png", profileimage);
-                            
-                        }
-                        catch
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Unable to download image...");
-                            goto Profile;
-                        }
-                        Console.Clear();
-                        Console.WriteLine("Success!");
-                        goto Profile;
-                    }
-                    else if (readline4 == "4")
+                    else if (readline4 == "3")
                     {
                         Console.Clear();
                         goto Start;
@@ -287,36 +227,7 @@ namespace start
                     Console.WriteLine("Success!");
                     goto Profile;
                 }
-                else if (readline3 == "4") // Note to Self: Remove this when Rec Room shuts down
-                {
-                    Console.Title = "Hyperion Profile Downloader";
-                    Console.Clear();
-                    Console.WriteLine("Profile Downloader: This tool takes the username and profile image of any Rec Room username you type in and imports it to Hyperion.");
-                    Console.WriteLine("Please type the @ username of the profile you would like:");
-                    string readusername = Console.ReadLine();
-                    if (readusername.StartsWith("@"))
-                    {
-                        readusername = readusername.Remove(0, 1);
-                    }
-                    string data2 = "";
-                    try
-                    {
-                        data2 = new WebClient().DownloadString("https://accounts.rec.net/account/search?name=" + readusername);
-                    }
-                    catch
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Failed to download profile...");
-                        goto Start;
-                    }
-                    
-                    ProfieStealer.ProfileSteal(data2);
-                    
-                    Console.Clear();
-                    Console.WriteLine("Success!");
-                    goto Start;
-                }
-                else if (readline3 == "5")
+                else if (readline3 == "4")
                 {
                     Console.Clear();
                     goto Start;
@@ -398,9 +309,9 @@ namespace start
                 Console.WriteLine(msg);
             }
         }
-        public static string msg = "//This is the server sending and recieving data from recroom." + Environment.NewLine + "//Ignore this if you don't know what this means." + Environment.NewLine + "//Please start up the build now.";
+        public static string msg = "//This is the server sending and recieving data from Rec Room." + Environment.NewLine + "//Ignore this if you don't know what this means." + Environment.NewLine + "//Please start up the build now.";
         public static string version = "";
-        public static string appversion = "0.7.0";
+        public static string appversion = "1.0.0";
         public static bool bannedflag = false;
     }
 

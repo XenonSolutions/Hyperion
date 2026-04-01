@@ -65,7 +65,7 @@ namespace start
         Start:
             Console.Title = "Hyperion Startup Menu";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Hyperion - Open source Old RecRoom server software. (Version: " + appversion + ")");
+            Console.WriteLine("Hyperion - Open source Old Rec Room server software. (Version: " + appversion + ")");
             Console.WriteLine("Made and provided by Xenon.");
             Console.WriteLine("Download source code here: https://github.com/XenonSolutions/Hyperion");
             Console.WriteLine("Discord: https://discord.gg/daC8QUhnFP" + Environment.NewLine);
@@ -358,7 +358,7 @@ namespace start
                 }
                 else if (readline2 == "2018")
                 {
-                    Console.WriteLine("May, July or September (SEPTEMBER MIGHT NOT WORK) 2018: (M, J, S)");
+                    Console.WriteLine("May, July or September 2018: (M, J, S)");
                     string readline3 = Console.ReadLine();
                     if ((readline3 == "M") || (readline3 == "m"))
                     {
@@ -376,7 +376,7 @@ namespace start
                         Console.Title = "Hyperion September 27th 2018";
                         version = "2018";
                         Console.Clear();
-                        Console.WriteLine("Version Selected: September 27th, 2018.");
+                        Console.WriteLine("Version Selected: September 27th, 2018. (Experimental)");
                         new NameServer();
                         new ImageServer();
                         new APIServer();

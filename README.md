@@ -1,6 +1,6 @@
 # Welcome to Hyperion!
 ---
-Hyperion is a RecRoom server software made by Xenon, based off OpenRed by recroom2016!
+Hyperion is a RecRoom server software made by Xenon, based off OpenRec by recroom2016!
 
 ### Branches
  - Master / main

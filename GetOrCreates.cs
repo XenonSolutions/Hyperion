@@ -51,11 +51,11 @@ namespace api2017
 					ForceJuniorImages = false,
 					HasBirthday = true
 				}
-				
+
 			});
 		}
 
 		// Token: 0x06000199 RID: 409 RVA: 0x00002BBE File Offset: 0x00000DBE
-		
+
 	}
 }

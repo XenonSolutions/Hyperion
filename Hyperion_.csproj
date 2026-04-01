@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/XenonSolutions/Hyperion</RepositoryUrl>
     <PackageProjectUrl>https://discord.gg/daC8QUhnFP</PackageProjectUrl>
     <Company>Xenon</Company>
-    <Version>0.7.0</Version>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

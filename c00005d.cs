@@ -11,11 +11,11 @@ namespace vaultgamesesh
 	internal sealed class c00005d
 	{
 		// Token: 0x0600001C RID: 28 RVA: 0x00002B94 File Offset: 0x00000D94
-		public static Dictionary<string, c00005d.c000060> m00003a()
+		public static Dictionary<string, c00005d.c000060> m00003a() // 
 		{
 			Dictionary<string, c00005d.c000060> dictionary = new Dictionary<string, c00005d.c000060>();
 			string[] directories = Directory.GetDirectories(c000004.m000007());
-			for (int i = 0; i < directories.Length; i++)
+			for (int i = 0; i < directories.Length; i++) // 
 			{
 				c00005d.c000060 c = JsonConvert.DeserializeObject<c00005d.c000060>(File.ReadAllText(directories[i] + "\\RoomDetails.json"));
 				dictionary.Add(c.Room.Name, c);
@@ -24,10 +24,10 @@ namespace vaultgamesesh
 		}
 
 		// Token: 0x0600001D RID: 29 RVA: 0x00002BFC File Offset: 0x00000DFC
-		public static List<c00005d.c000061> m000035()
+		public static List<c00005d.c000061> m000035() // 
 		{
 			List<c00005d.c000061> list = new List<c00005d.c000061>();
-			foreach (KeyValuePair<string, c00005d.c000060> keyValuePair in c00005d.f000024)
+			foreach (KeyValuePair<string, c00005d.c000060> keyValuePair in c00005d.f000024) // 
 			{
 				list.Add(keyValuePair.Value.Room);
 			}
@@ -73,7 +73,7 @@ namespace vaultgamesesh
 		// Token: 0x04000008 RID: 8
 		public static Dictionary<string, c00005d.c000060> f000024 = new Dictionary<string, c00005d.c000060>
 		{
-			{
+			{ // MakerRoom
 				"MakerRoom",
 				new c00005d.c000060
 				{
@@ -123,7 +123,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Park
 				"Park",
 				new c00005d.c000060
 				{
@@ -173,7 +173,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Lounge
 				"Lounge",
 				new c00005d.c000060
 				{
@@ -223,7 +223,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // PerformanceHall
 				"PerformanceHall",
 				new c00005d.c000060
 				{
@@ -231,7 +231,7 @@ namespace vaultgamesesh
 					{
 						RoomId = 23UL,
 						Name = "PerformanceHall",
-						Description = "A theater for plays, music, comedy and other performances.",
+						Description = "A theater for plays, music, comedy and other performances. Or for making the same generic talent show for the 100th time.",
 						CreatorPlayerId = 1UL,
 						ImageName = string.Empty,
 						State = 0,
@@ -273,7 +273,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Hangar
 				"Hangar",
 				new c00005d.c000060
 				{
@@ -333,7 +333,7 @@ namespace vaultgamesesh
 		// Token: 0x04000009 RID: 9
 		public static Dictionary<string, c00005d.c000060> f000050 = new Dictionary<string, c00005d.c000060>
 		{
-			{
+			{ // DormRoom
 				"DormRoom",
 				new c00005d.c000060
 				{
@@ -368,7 +368,7 @@ namespace vaultgamesesh
 							MaxPlayers = 20,
 							CanMatchmakeInto = true,
 							DataModifiedAt = DateTime.Now,
-							ReplicationId = "your mom still gae",
+							ReplicationId = "Your Mom is Gay",
 							SupportsJoinInProgress = true,
 							ReleaseStatus = 2,
 							UseAgeBasedMatchmaking = true,
@@ -393,7 +393,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // RecCenter
 				"RecCenter",
 				new c00005d.c000060
 				{
@@ -449,7 +449,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // 3DCharades
 				"3DCharades",
 				new c00005d.c000060
 				{
@@ -499,7 +499,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // DiscGolfLake
 				"DiscGolfLake",
 				new c00005d.c000060
 				{
@@ -554,7 +554,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // DiscGolfPropulsion
 				"DiscGolfPropulsion",
 				new c00005d.c000060
 				{
@@ -609,7 +609,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Dodgeball
 				"Dodgeball",
 				new c00005d.c000060
 				{
@@ -664,7 +664,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Paddleball
 				"Paddleball",
 				new c00005d.c000060
 				{
@@ -719,7 +719,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Paintball
 				"Paintball",
 				new c00005d.c000060
 				{
@@ -822,7 +822,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // GoldenTrophy
 				"GoldenTrophy",
 				new c00005d.c000060
 				{
@@ -877,7 +877,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // TheRiseofJumbotron
 				"TheRiseofJumbotron",
 				new c00005d.c000060
 				{
@@ -932,7 +932,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // CrimsonCauldron
 				"CrimsonCauldron",
 				new c00005d.c000060
 				{
@@ -987,7 +987,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // IsleOfLostSkulls
 				"IsleOfLostSkulls",
 				new c00005d.c000060
 				{
@@ -1042,7 +1042,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Soccer
 				"Soccer",
 				new c00005d.c000060
 				{
@@ -1097,7 +1097,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // LaserTag
 				"LaserTag",
 				new c00005d.c000060
 				{
@@ -1164,7 +1164,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // RecRoyaleSquads
 				"RecRoyaleSquads",
 				new c00005d.c000060
 				{
@@ -1219,7 +1219,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // RecRoyaleSolos
 				"RecRoyaleSolos",
 				new c00005d.c000060
 				{
@@ -1274,7 +1274,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Lounge
 				"Lounge",
 				new c00005d.c000060
 				{
@@ -1282,7 +1282,7 @@ namespace vaultgamesesh
 					{
 						RoomId = 22UL,
 						Name = "Lounge",
-						Description = "A low-key lounge to chill with your friends. Great for private parties!",
+						Description = "A low-key lounge to chill with your friends. Great for private parties, but not for public servers due to toxic players screaming slurs in your ears.",
 						CreatorPlayerId = APIServer.CachedPlayerID,
 						ImageName = "3e8c2458f1e542ab8aa275e4083ee47a",
 						State = 0,
@@ -1324,7 +1324,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Park
 				"Park",
 				new c00005d.c000060
 				{
@@ -1374,7 +1374,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // QuestForDraucula
 				"QuestForDraucula",
 				new c00005d.c000060
 				{
@@ -1424,7 +1424,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Bowling
 				"Bowling",
 				new c00005d.c000060
 				{
@@ -1479,7 +1479,7 @@ namespace vaultgamesesh
 					}
 				}
 			},
-			{
+			{ // Custom Room (placeholder data that gets overwritten by actual room data on load)
 				File.ReadAllText("SaveData\\Rooms\\Downloaded\\roomname.txt"),
 				new c00005d.c000060
 				{

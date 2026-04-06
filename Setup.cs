@@ -22,6 +22,7 @@ namespace start
 			if (!(File.Exists("SaveData\\App\\firsttime.txt")))
 			{
 				File.WriteAllText("SaveData\\App\\firsttime.txt", "I goon to femboys but nobody will know because this is a secret file that only the program can see");
+				Console.WriteLine("Created firsttime.txt");
 				firsttime = true;	
 			}
 			if (!(File.Exists("SaveData\\avatar.txt")))

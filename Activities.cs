@@ -17,27 +17,52 @@ namespace api
 				{
 					new Activities.Charades.word
 					{
-						EN_US = "Test Word",
+						EN_US = "Paint Gun",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "Test Word 2",
+						EN_US = "AirPod Shotty",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "Test Word 3",
+						EN_US = "Deez Nuts",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "Test Word 4",
+						EN_US = "Sussy Baka",
 						Difficulty = 0
 					},
 					new Activities.Charades.word
 					{
-						EN_US = "Test Word 5",
+						EN_US = "Your IP Address",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "That furry in the middle of Laurus's FatFur Paradise Park",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Your Mom",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Do nothing until someone catches on",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Tung Tung Tung Sahur",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "iPhone",
 						Difficulty = 0
 					}
 				};

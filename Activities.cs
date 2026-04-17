@@ -62,7 +62,37 @@ namespace api
 					},
 					new Activities.Charades.word
 					{
+						EN_US = "Steal a Brainrot",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
 						EN_US = "iPhone",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Rec Room on June 1st, 2026",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Protogen",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Femboy",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Furry",
+						Difficulty = 0
+					},
+					new Activities.Charades.word
+					{
+						EN_US = "Half-Life 3",
 						Difficulty = 0
 					}
 				};

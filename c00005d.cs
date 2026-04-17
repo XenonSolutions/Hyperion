@@ -368,7 +368,7 @@ namespace vaultgamesesh
 							MaxPlayers = 20,
 							CanMatchmakeInto = true,
 							DataModifiedAt = DateTime.Now,
-							ReplicationId = "Your Mom is Gay",
+							ReplicationId = "I goon to femboys but nobody will know because this is a secret room",
 							SupportsJoinInProgress = true,
 							ReleaseStatus = 2,
 							UseAgeBasedMatchmaking = true,
@@ -1432,7 +1432,7 @@ namespace vaultgamesesh
 					{
 						RoomId = 28UL,
 						Name = "Bowling",
-						Description = "shut up coffeeman this bowling description was so annoying",
+						Description = "Hang out with friends, bowl a few games, eat snacks!",
 						CreatorPlayerId = 782441001UL,
 						ImageName = "4d143a3359e8483e8d48116ab6cacecb",
 						State = 0,
@@ -1537,7 +1537,7 @@ namespace vaultgamesesh
 		};
 
 		// Token: 0x0200003D RID: 61
-		public enum enum05e
+		public enum enum05e // Dummy
 		{
 
 		}
@@ -2337,25 +2337,25 @@ namespace vaultgamesesh
 		}
 
 		// Token: 0x02000043 RID: 67
-		public enum enum064
+		public enum enum064 // Dummy
 		{
 
 		}
 
 		// Token: 0x02000044 RID: 68
-		public enum enum065
+		public enum enum065 // Dummy
 		{
 
 		}
 
 		// Token: 0x02000045 RID: 69
-		public enum enum066
+		public enum enum066 // Dummy
 		{
 
 		}
 
 		// Token: 0x02000046 RID: 70
-		public enum enum067
+		public enum enum067 // Dummy
 		{
 
 		}

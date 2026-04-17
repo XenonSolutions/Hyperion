@@ -30,7 +30,7 @@ namespace server
 		{
 			try
 			{
-				//2 different servers for 3 different stages of the game, the apis change so much idk anymore
+				// 2 different servers for 3 different stages of the game, the apis change so much idk anymore
 				this.listener.Prefixes.Add("http://localhost:" + start.Program.version + "/");
 				if (start.Program.version == "2016")
 				{
@@ -71,7 +71,7 @@ namespace server
 						{
 							s = VersionCheckResponse;
 						}
-						if (Url == ("config/v2"))
+						if (Url == "config/v2")
 						{
 							s = Config2.GetDebugConfig();
 						}
@@ -93,7 +93,7 @@ namespace server
 						}
 						if (Url == "players/v1/getorcreate")
 						{
-							s = getorcreate.GetOrCreate((ulong.Parse(text.Remove(0, 32).Remove(7, text.Length - 39))));
+							s = getorcreate.GetOrCreate(ulong.Parse(text.Remove(0, 32).Remove(7, text.Length - 39)));
 						}
 						if (Url.StartsWith("images/v1/profile/"))
 						{
@@ -104,10 +104,9 @@ namespace server
 						{
 							s = File.ReadAllText("SaveData\\avatar.txt");
 						}
-						if (Url == "avatar/v2/set")
+						if (Url == "avatar/v2/set") // for later 2018 builds compatibility
 						{
-							//for later 2018 builds compatibility
-							if (!(text.Contains("FaceFeatures")))
+							if (!text.Contains("FaceFeatures"))
 							{
 								string postdatacache = text;
 								text = postdatacache.Remove(postdatacache.Length - 1, 1) + File.ReadAllText("SaveData\\App\\facefeaturesadd.txt");
@@ -150,12 +149,12 @@ namespace server
 						{
 							s = Activities.Charades.words();
 						}
-						if (Url == "images/v2/profile/") //disabled with a / at the end
-                        {
+						if (Url == "images/v2/profile/") // disabled with a / at the end
+						{
 							s = BracketResponse;
 							int NewLength = text.Length - 50;
 							File.WriteAllBytes("SaveData\\profileimage.png", Encoding.UTF8.GetBytes(text.Remove(0, 50).Remove(NewLength - 48, 48)));
-                        }
+						}
 						Console.WriteLine("API Response: " + s);
 						byte[] bytes = null;
 						if (image == true)
@@ -208,13 +207,13 @@ namespace server
 						{
 							s = VersionCheckResponse;
 						}
-						if (Url == ("config/v2"))
+						if (Url == "config/v2")
 						{
 							s = Config2.GetDebugConfig();
 						}
 						if (Url == "platformlogin/v1/profiles")
 						{
-							s = getorcreate.GetOrCreateArray((ulong.Parse(text.Remove(0, 32))));
+							s = getorcreate.GetOrCreateArray(ulong.Parse(text.Remove(0, 32)));
 							CachedPlayerID = ulong.Parse(text.Remove(0, 32));
 							CachedPlatformID = ulong.Parse(text.Remove(0, 22));
 							File.WriteAllText("SaveData\\Profile\\userid.txt", Convert.ToString(CachedPlayerID));
@@ -247,21 +246,20 @@ namespace server
 							s = getorcreate.GetOrCreate(CachedPlayerID);
 						}
 						if (Url == "players/v1/list")
-                        {
+						{
 							s = BracketResponse;
-                        }
+						}
 						if (Url == "avatar/v2")
 						{
 							s = File.ReadAllText("SaveData\\avatar.txt");
 						}
 						if (Url == "avatar/v2/saved")
-                        {
-							s = BracketResponse;
-                        }
-						if (Url == "avatar/v2/set")
 						{
-							//for later 2018 builds compatibility
-							if (!(text.Contains("FaceFeatures")))
+							s = BracketResponse;
+						}
+						if (Url == "avatar/v2/set") // for later 2018 builds compatibility
+						{
+							if (!text.Contains("FaceFeatures"))
 							{
 								string postdatacache = text;
 								text = postdatacache.Remove(postdatacache.Length - 1, 1) + File.ReadAllText("SaveData\\App\\facefeaturesadd.txt");
@@ -321,7 +319,7 @@ namespace server
 							s = "{\"IsPure\":true}";
 						}
 						if (Url == "images/v3/profile")
-                        {
+						{
 							s = BracketResponse;
 							int NewLength = text.Length - 50;
 							File.WriteAllBytes("SaveData\\profileimage.png", Encoding.UTF8.GetBytes(text.Remove(0, 50).Remove(NewLength - 48, 48)));
@@ -381,7 +379,7 @@ namespace server
 							}
 							s = VersionCheckResponse;
 						}
-						if (Url == ("config/v2"))
+						if (Url == "config/v2")
 						{
 							s = Config2.GetDebugConfig();
 						}
@@ -474,10 +472,9 @@ namespace server
 						{
 							s = BracketResponse;
 						}
-						if (Url == "avatar/v2/set")
+						if (Url == "avatar/v2/set") // for later 2018 builds compatibility
 						{
-							//for later 2018 builds compatibility
-							if (!(text.Contains("FaceFeatures")))
+							if (!text.Contains("FaceFeatures"))
 							{
 								string postdatacache = text;
 								text = postdatacache.Remove(postdatacache.Length - 1, 1) + File.ReadAllText("SaveData\\App\\facefeaturesadd.txt");
@@ -713,6 +710,6 @@ namespace server
 
 		public static string Banned = "{\"ReportCategory\":1,\"Duration\":10000000000000000,\"GameSessionId\":100,\"Message\":\"You have been banned. You are probably a little kid and are now whining at your VR headset. If you aren't a little kid, DM me to appeal.\"}";
 
-		private HttpListener listener = new HttpListener(); 
+		private HttpListener listener = new HttpListener();
 	}
 }
